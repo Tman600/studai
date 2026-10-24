@@ -1,0 +1,158 @@
+{
+  "eyebrow": "Currently building 3 products",
+  "wordmark": "STUD AI",
+  "caption": "The AI development studio",
+  "ctaTitle": "Got something worth building?",
+  "ctaEmail": "hello.studai@gmail.com",
+  "footer": "© 2026 — The AI Development Studio",
+  "buildLog": {
+    "building": [
+      {
+        "slug": "pod-01",
+        "name": "Pod 01",
+        "desc": "Your Personal Ai Table Butler",
+        "meta": "",
+        "image": "/images/pod-01.svg",
+        "longDesc": "Pod 01 is a small, AI driven pod built from the ground up with versatillity in mind. Pod 01 features a status ring and a claw capable of grabbing many items ie: Butter, Water bottles, Coffee and keys. Details are subject to change as development continues",
+        "downloadUrl": ""
+      },
+      {
+        "slug": "zion",
+        "name": "Zion",
+        "desc": "Your personal AI assistant, running locally on your PC",
+        "meta": "",
+        "image": "/images/zion.png",
+        "longDesc": "Zion is a locally run AI assistant that runs directly on your PC and only chimes in when needed, instead of always answering questions. Zion quietly works in the background and steps in when it feels genuinely useful. Nothing goes to the cloud and Zion only searches the web when needed.",
+        "downloadUrl": "",
+        "upcoming": [
+          "Refining when Zion chooses to speak up vs. stay quiet",
+          "Local web search integration",
+          "Broader task handling beyond the initial assistant loop"
+        ]
+      },
+      {
+        "slug": "dialup",
+        "name": "DialUp",
+        "desc": "A modern take on the 80s browser",
+        "meta": "",
+        "image": "/images/dialup.svg",
+        "longDesc": "DialUp reimagines the modern browser without the bloat and cloud dependency. Inspired by the feel of the 80s and early internet, DialUp strips away unnecessary background processes, forced features, and constant updates to give control back to the user.\n\nThe goal is simple: make the browser feel like it belongs to you. Users can customize nearly every aspect of their experience, while features like adjustable internet speeds let users intentionally slow down their browsing and create a more mindful relationship with the internet.",
+        "downloadUrl": ""
+      }
+    ],
+    "shipped": [
+      {
+        "slug": "carbon",
+        "name": "Carbon",
+        "desc": "An email client that reads like a messages app",
+        "meta": "v1.0",
+        "image": "/images/carbon.svg",
+        "longDesc": "Carbon is a mail client built on one decision: a conversation is a person, not a subject line. Every other client threads by what a message was called, which is why a year of back-and-forth with the same person arrives as forty separate stacks of Re: Re: Re:. Carbon groups by who is on the message instead, so the subject becomes something that can change mid-conversation - and when it does, it appears as a chip in the middle of the stream rather than splitting the thread in two. Everything else follows from that. Quoted history is folded down to a line count you can open, signature blocks are set small underneath, attachments become file cards on the message that carried them, and a read receipt is an Opened stamp under the last thing you sent. The headers do real work: Reply-To decides where your reply actually goes and says so when it is not the sender, no-reply addresses close the box instead of letting you write into a void, and List-Unsubscribe is what the People filter uses to strip the newsletters out and leave you with correspondence. It runs on your own machine and talks IMAP and SMTP straight to your mail host - Gmail and Workspace through a Google sign-in, anything else with an app password - so no mail passes through anyone else. With nothing configured it serves a demo inbox so you can see the whole thing working before handing it a password. Reading it on a phone means putting it on your network, so that mode arrives locked: a passcode for every device that is not the machine it runs on.",
+        "downloadUrl": "https://github.com/Tman600/carbon/archive/refs/tags/v1.0.zip",
+        "changelog": [
+          {
+            "version": "v1.0",
+            "date": "September 2026",
+            "notes": "First complete build: conversations grouped by participants, subject changes shown inline, quoted text and signatures folded away, attachments as file cards. Google sign-in over OAuth or an app password, Reply-To honoured and no-reply senders refused, a People panel that filters the inbox by correspondent, compose with autocomplete from everyone you have mail from, and a passcode-locked network mode for reading on a phone."
+          }
+        ],
+        "upcoming": [
+          "Attachments you can send, not only receive - the one thing the interface offers that the server cannot do yet",
+          "A phone build that installs to the home screen, refreshes when you pull, and flags a thread with a swipe",
+          "HTML mail rendered in a sandbox rather than flattened to text, with remote images held back until you ask for them",
+          "Folders past Inbox and Sent, so a thread can be archived instead of only read",
+          "A sync that listens instead of polling: IDLE for new mail, fetches by UID rather than re-reading the window, and message bodies pulled only when a thread is opened",
+          "Search that asks the server, so it reaches mail older than the few hundred messages held locally"
+        ]
+      },
+      {
+        "name": "Opti-Mole",
+        "desc": "A hidden-role party game that runs on a DVD drive and your own discs",
+        "meta": "v1.2",
+        "slug": "opti-mole",
+        "image": "/images/opti-mole.svg",
+        "longDesc": "Opti-Mole is a party game for two teams, a house, and twenty DVDs you already own. The game never plays the discs. It reads them: every disc is fingerprinted from its volume label and a hash of its file table, so the drive is the only thing in the room that can tell one silver circle from another, and the tray is the bottleneck every task has to pass through. A host hides the discs around the house and gives clues out loud. Teams hunt them down, carry them back, and claim them at the tray with a private team code, then photograph whatever the app asks for on a phone. Three discs each game are special and carry powers - HIJACK lets you muscle in on the other team's task, SCRATCH makes their next disc take longer to load. Meanwhile one player on each team is secretly working for the other side. At the end every photograph goes up on the shared screen, the room argues each one, the banked powers are spent at once, and both teams name the Mole in their own ranks. It runs on the Python standard library with no pip install, no internet and no account: a small local server, a laptop screen, and a phone page for every player. No optical drive? It drops into simulator mode and deals you twenty fake discs.",
+        "downloadUrl": "https://github.com/Tman600/opti-mole/archive/refs/tags/v1.2.zip",
+        "changelog": [
+          {
+            "version": "v1.2",
+            "date": "September 2026",
+            "notes": "Opti-Mole became an app. It opens in its own window with no address bar and nothing to type, and closing the window stops the game. A boot screen plays the studio ident once on the way in, the menu music now starts by itself instead of waiting to be clicked, and both halves install: players can put the phone half on their home screen and get the icon and a full-screen page. Nothing about how the game plays changed."
+          },
+          {
+            "version": "v1.1",
+            "date": "September 2026",
+            "notes": "The reel is judged by the whole room from their phones, and the record afterwards shows who voted against their own team on every photograph the room argued about. Race tasks now reach both teams at once instead of handing a free bonus to whoever found the disc, and tasks are worth 10, 15 or 20 points by how long they were given."
+          },
+          {
+            "version": "v1.0",
+            "date": "September 2026",
+            "notes": "First complete build: disc fingerprinting and registration, host hiding and briefing, secret roles and per-team passcodes, parallel team tasks with HIJACK and SCRATCH, the phone companion and camera, the reel, powers and accusations, plus a narrated animated tutorial."
+          }
+        ],
+        "upcoming": [
+          "Per-player attribution during play: the phone asks who ran each task, so a slow, sloppy run has a name on it",
+          "Leads that point at your own team's hidden discs rather than a shared pool",
+          "A host screen during play showing which special discs are still out there",
+          "A bigger built-in task pool, and avoiding tasks used in recent games"
+        ]
+      },
+      {
+        "name": "Newsy",
+        "desc": "Wake up to a Fresh Paper inside your home",
+        "meta": "v1.0",
+        "slug": "newsy",
+        "image": "",
+        "longDesc": "Do you miss waking up every morning and getting the daily paper in your mailbox—or maybe you just don’t like walking outside?\n\nWell, look no further than **Newsy**.\n\nNewsy is an app that prints your news, your way. Simply open the app, pick your sources, and you’re done! Your personalized newspaper will be sent straight to your printer.\n\nWith multiple formats to choose from and upcoming themes, the customization possibilities are endless.\n.",
+        "downloadUrl": "https://drive.google.com/uc?export=download&id=17v5Z2xEHjfn3Qkrj-DFhyO5Imauolywl",
+        "changelog": [],
+        "upcoming": []
+      },
+      {
+        "name": "Trailbound",
+        "desc": "A terminal-based journey RPG with local AI-driven storytelling",
+        "meta": "v1.0",
+        "slug": "trailbound",
+        "image": "/images/trailbound.svg",
+        "longDesc": "Trailbound is a substantial terminal game built around journeys rather than combat encounters — five distinct journey genres plus a freeplay mode, all rendered through a rich, styled terminal UI. What sets it apart is its local AI integration: Trailbound runs against Ollama or llama.cpp, giving it dynamic, model-driven storytelling without needing a cloud connection. It keeps a rolling summary memory so long journeys stay coherent, ships with a full test suite, and comes with a cross-platform installer so it's easy to pick up and play. Released under a custom MIT-based license crediting both its creator and Anthropic.",
+        "downloadUrl": "https://drive.google.com/uc?export=download&id=12kzEQuYSXCXiqFCq8mzOQR05DD56rveC",
+        "changelog": [
+          {
+            "version": "v1.0",
+            "date": "June 2026",
+            "notes": "Initial public release — five journey genres, freeplay mode, local AI storytelling via Ollama/llama.cpp, and a cross-platform installer."
+          },
+          {
+            "version": "v0.9",
+            "date": "May 2026",
+            "notes": "Added rolling summary memory so long journeys stay coherent across many turns. Expanded the test suite ahead of release."
+          },
+          {
+            "version": "v0.5",
+            "date": "March 2026",
+            "notes": "First playable build with a single journey genre and a rich terminal UI."
+          }
+        ],
+        "upcoming": [
+          "Additional journey genres beyond the original five",
+          "Save file browser and journey history",
+          "Optional cloud model support alongside local inference"
+        ]
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "title": "Local first",
+      "desc": "Most of what we ship runs on your own machine. Zion and Trailbound run their models locally, Carbon talks straight to your mail host, and Opti-Mole needs no internet and no account."
+    },
+    {
+      "title": "AI with a job",
+      "desc": "A model goes in where it does something a plain program can't, like telling Trailbound's stories or deciding when Zion should speak up. Everywhere else, it stays out."
+    },
+    {
+      "title": "Off the screen",
+      "desc": "Some builds live in the room. Opti-Mole turns a DVD drive and your own discs into a party game, and Pod 01 is a claw on your table that passes the butter."
+    }
+  ]
+}

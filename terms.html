@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- every link below is relative to this; publishing to GitHub Pages
+     swaps it for the sub-path the site is served from -->
+<base href="/studai/">
+<title>Terms of Service — STUD AI</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="legal.css">
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav>
+    <a href="./" class="nav-logo">STUD AI</a>
+    <div class="nav-links">
+      <a href="projects">Projects</a>
+      <a href="./#capabilities">Capabilities</a>
+      <a href="./#contact">Start a Build</a>
+    </div>
+  </nav>
+</div>
+
+<main class="legal-main">
+  <a href="./" class="back-link">← Back home</a>
+
+  <span class="section-label">Legal</span>
+  <h1 class="legal-title">Terms of Service</h1>
+  <p class="legal-updated">Last updated: <span id="lastUpdated"></span></p>
+
+  <div class="legal-body">
+    <p>These terms cover your use of this website. By visiting, you agree to them. If you don't agree, the only real remedy is to stop using the site — there's no account to cancel or service to opt out of.</p>
+
+    <h2>What this site is</h2>
+    <p>This is a personal portfolio and project showcase site. It describes software projects, some released and some in progress, and may link out to third-party locations (like GitHub, Dropbox, or similar) where files for those projects can be downloaded.</p>
+
+    <h2>Downloads</h2>
+    <p>Where a project offers a download, the linked file is provided as-is, with no warranty of any kind — no guarantee it's bug-free, fit for a particular purpose, or that it will keep working on your system. You use any downloaded software at your own risk. If a download link points to a third-party host, that host's own terms apply to the download itself.</p>
+
+    <h2>Intellectual property</h2>
+    <p>The content on this site — including project names, descriptions, and images — belongs to the site owner unless otherwise noted. You're welcome to browse, share links to, and reference this site. Reproducing substantial parts of it elsewhere without permission isn't authorized.</p>
+
+    <h2>No warranty</h2>
+    <p>This site is provided "as is." There's no guarantee it will be available at all times, free of errors, or that any project described here will ship on any particular timeline — projects marked "in progress" are exactly that, and may change or be discontinued without notice.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the extent permitted by law, the site owner isn't liable for any damages arising from your use of this site or anything you download through it.</p>
+
+    <h2>Changes to these terms</h2>
+    <p>These terms may be updated from time to time as the site changes. The "last updated" date above reflects the most recent revision.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms can be sent to <a href="mailto:hello@studai.dev" id="contactEmail">hello@studai.dev</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <span class="footer-logo">STUD AI</span>
+  <div class="footer-links">
+    <a href="terms">Terms</a>
+    <a href="privacy">Privacy</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  fetch('site-data.json').then(r => r.json()).then(data => {
+    if(data.ctaEmail){
+      const el = document.getElementById('contactEmail');
+      el.textContent = data.ctaEmail;
+      el.href = 'mailto:' + data.ctaEmail;
+    }
+  }).catch(() => {});
+</script>
+<script src="bg.js"></script>
+<script src="notice.js"></script>
+</body>
+</html>

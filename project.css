@@ -1,0 +1,214 @@
+/* A project page, set like a spec sheet: the artwork, then ruled sections. */
+
+.project-main{
+  padding: 96px 0 90px;
+}
+
+.project-inner{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.project-main .back-link{ margin-bottom:40px; }
+
+.project-status-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:40px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+.project-status-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--gray);
+}
+.project-meta-tag{ margin-left:auto; }
+
+.download-row{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.download-note{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  color:var(--dim);
+}
+
+.project-title{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(2.2rem, 6.5vw, 4rem);
+  text-transform:uppercase;
+  line-height:1;
+  letter-spacing:-0.02em;
+  margin-bottom:18px;
+}
+
+.project-tagline{
+  font-size:1.1rem;
+  color:var(--gray);
+  max-width:56ch;
+  line-height:1.6;
+  margin-bottom:52px;
+}
+
+/* ---------- THE ARTWORK ----------
+   A ruled plate lined up with the text column, showing the whole image. There
+   used to be a blurred halo behind it, painted from the image's own colours -
+   the surest tell of a generated page - and the image was cropped to fill. */
+.project-image-bleed{
+  max-width:900px;
+  margin:0 auto 8px;
+  padding:28px var(--gutter) 0;
+}
+
+.project-image-frame{
+  width:100%;
+  aspect-ratio: 16 / 9;
+  max-height:62vh;
+  border:1px solid var(--line);
+  background:var(--panel);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.project-image-frame img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+.project-body{
+  border-top:1px solid var(--line);
+  padding-top:32px;
+  margin-top:44px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.project-body .section-label{ color:var(--gray); }
+
+.project-long-desc{
+  font-size:1.02rem;
+  line-height:1.75;
+  color:var(--white);
+  max-width:68ch;
+  /* longDesc is set as text, so blank lines in site-data.json are the only
+     paragraph breaks it has - honour them instead of running them together */
+  white-space:pre-line;
+}
+
+.not-found{
+  padding-top:40px;
+}
+.not-found .project-desc{
+  color:var(--gray);
+  margin-top:16px;
+}
+
+/* ---------- CHANGELOG ---------- */
+.changelog-list{
+  display:flex;
+  flex-direction:column;
+}
+
+.changelog-entry{
+  display:flex;
+  gap:28px;
+  padding:20px 0;
+  border-top:1px solid var(--line-soft);
+}
+.changelog-entry:first-child{ border-top:none; padding-top:2px; }
+
+.changelog-marker{
+  flex-shrink:0;
+  width:130px;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+@media (max-width:480px){
+  .changelog-entry{ flex-direction:column; gap:8px; }
+  .changelog-marker{ width:auto; flex-direction:row; align-items:baseline; gap:10px; }
+}
+.changelog-version{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.85rem;
+  font-weight:600;
+  color:var(--white);
+}
+.changelog-date{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.7rem;
+  color:var(--dim);
+}
+.changelog-notes{
+  font-size:0.95rem;
+  line-height:1.7;
+  color:var(--gray);
+  max-width:62ch;
+}
+
+/* ---------- UPCOMING ---------- */
+.upcoming-list{
+  display:flex;
+  flex-direction:column;
+}
+
+.upcoming-item{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  padding:14px 0;
+  border-top:1px solid var(--line-soft);
+  font-size:0.95rem;
+  line-height:1.6;
+  color:var(--white);
+  max-width:66ch;
+}
+.upcoming-item:first-child{ border-top:none; padding-top:2px; }
+
+/* a plain ruled tick, not a little gradient bead */
+.upcoming-icon{
+  flex-shrink:0;
+  width:14px;
+  height:1px;
+  background:var(--dim);
+  transform:translateY(-4px);
+}
+
+/* ---------- DOWNLOAD ---------- */
+.download-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:200px;
+  padding:15px 30px;
+  border:1px solid var(--white);
+  background:var(--white);
+  color:var(--black);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  font-weight:600;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  text-align:center;
+  cursor:pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.download-btn.available:hover{
+  background:transparent;
+  color:var(--white);
+}
+
+.download-btn.disabled{
+  color:var(--dim);
+  border-color:var(--line);
+  background:transparent;
+  cursor:not-allowed;
+  pointer-events:none;
+}

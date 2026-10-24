@@ -1,0 +1,94 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="topShade" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#292929"/>
+      <stop offset="65%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#121212"/>
+    </radialGradient>
+    <linearGradient id="sideShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="ringGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5f5f0" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#f5f5f0" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f5f5f0" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0a0a0a"/>
+  <rect x="0" y="0" width="1200" height="675" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- floor shadow -->
+  <ellipse cx="555" cy="500" rx="220" ry="20" fill="#000000" opacity="0.6"/>
+
+  <!-- ============ POD BODY — Echo Dot Gen 2 style: short wide puck ============ -->
+
+  <!-- puck side wall -->
+  <rect x="410" y="340" width="290" height="90" fill="url(#sideShade)" stroke="#454545" stroke-width="2.5"/>
+
+  <!-- puck top face (flattened ellipse, seen at a slight angle) -->
+  <ellipse cx="555" cy="340" rx="145" ry="55" fill="url(#topShade)" stroke="#4a4a4a" stroke-width="2.5"/>
+
+  <!-- top face highlight -->
+  <path d="M 440 320 A 145 55 0 0 1 555 288" fill="none" stroke="#f5f5f0" stroke-width="2" opacity="0.15"/>
+
+  <!-- puck bottom face -->
+  <ellipse cx="555" cy="430" rx="145" ry="55" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="2"/>
+  <ellipse cx="555" cy="426" rx="118" ry="42" fill="#161616" stroke="#333333" stroke-width="1"/>
+
+  <!-- ============ LIGHT RING — flush band around the top edge ============ -->
+  <ellipse cx="555" cy="340" rx="145" ry="55" fill="none" stroke="#2c2c2c" stroke-width="10"/>
+
+  <!-- glowing ring segments set into the rim -->
+  <g stroke="url(#ringGlow)" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M 414 330 A 145 55 0 0 1 460 300">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 478 291 A 145 55 0 0 1 555 285">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 574 285 A 145 55 0 0 1 651 300">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 668 305 A 145 55 0 0 1 696 330">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ============ SPEAKER MESH on the side wall ============ -->
+  <g fill="#2a2a2a">
+    <circle cx="435" cy="365" r="2.5"/><circle cx="450" cy="365" r="2.5"/><circle cx="465" cy="365" r="2.5"/><circle cx="480" cy="365" r="2.5"/><circle cx="495" cy="365" r="2.5"/><circle cx="510" cy="365" r="2.5"/><circle cx="525" cy="365" r="2.5"/><circle cx="540" cy="365" r="2.5"/><circle cx="555" cy="365" r="2.5"/><circle cx="570" cy="365" r="2.5"/><circle cx="585" cy="365" r="2.5"/><circle cx="600" cy="365" r="2.5"/><circle cx="615" cy="365" r="2.5"/><circle cx="630" cy="365" r="2.5"/><circle cx="645" cy="365" r="2.5"/><circle cx="660" cy="365" r="2.5"/><circle cx="675" cy="365" r="2.5"/>
+    <circle cx="435" cy="380" r="2.5"/><circle cx="450" cy="380" r="2.5"/><circle cx="465" cy="380" r="2.5"/><circle cx="480" cy="380" r="2.5"/><circle cx="495" cy="380" r="2.5"/><circle cx="510" cy="380" r="2.5"/><circle cx="525" cy="380" r="2.5"/><circle cx="540" cy="380" r="2.5"/><circle cx="555" cy="380" r="2.5"/><circle cx="570" cy="380" r="2.5"/><circle cx="585" cy="380" r="2.5"/><circle cx="600" cy="380" r="2.5"/><circle cx="615" cy="380" r="2.5"/><circle cx="630" cy="380" r="2.5"/><circle cx="645" cy="380" r="2.5"/><circle cx="660" cy="380" r="2.5"/><circle cx="675" cy="380" r="2.5"/>
+    <circle cx="435" cy="395" r="2.5"/><circle cx="450" cy="395" r="2.5"/><circle cx="465" cy="395" r="2.5"/><circle cx="480" cy="395" r="2.5"/><circle cx="495" cy="395" r="2.5"/><circle cx="510" cy="395" r="2.5"/><circle cx="525" cy="395" r="2.5"/><circle cx="540" cy="395" r="2.5"/><circle cx="555" cy="395" r="2.5"/><circle cx="570" cy="395" r="2.5"/><circle cx="585" cy="395" r="2.5"/><circle cx="600" cy="395" r="2.5"/><circle cx="615" cy="395" r="2.5"/><circle cx="630" cy="395" r="2.5"/><circle cx="645" cy="395" r="2.5"/><circle cx="660" cy="395" r="2.5"/><circle cx="675" cy="395" r="2.5"/>
+    <circle cx="435" cy="410" r="2.5"/><circle cx="450" cy="410" r="2.5"/><circle cx="465" cy="410" r="2.5"/><circle cx="480" cy="410" r="2.5"/><circle cx="495" cy="410" r="2.5"/><circle cx="510" cy="410" r="2.5"/><circle cx="525" cy="410" r="2.5"/><circle cx="540" cy="410" r="2.5"/><circle cx="555" cy="410" r="2.5"/><circle cx="570" cy="410" r="2.5"/><circle cx="585" cy="410" r="2.5"/><circle cx="600" cy="410" r="2.5"/><circle cx="615" cy="410" r="2.5"/><circle cx="630" cy="410" r="2.5"/><circle cx="645" cy="410" r="2.5"/><circle cx="660" cy="410" r="2.5"/><circle cx="675" cy="410" r="2.5"/>
+  </g>
+
+  <!-- small center button on top face -->
+  <circle cx="555" cy="340" r="10" fill="#161616" stroke="#3a3a3a" stroke-width="1.5"/>
+
+  <!-- ============ CLAW ARM — straight, no joints, sticking out the side ============ -->
+  <rect x="700" y="378" width="130" height="16" rx="8" fill="#242424" stroke="#4a4a4a" stroke-width="2"/>
+
+  <!-- claw fingers at the end of the arm -->
+  <g stroke="#9a9a95" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 830 386 L 860 368 L 860 386" />
+    <path d="M 830 386 L 860 404 L 860 386" />
+  </g>
+  <g stroke="#f5f5f0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 830 386 L 860 368 L 860 386" />
+    <path d="M 830 386 L 860 404 L 860 386" />
+  </g>
+
+  <!-- ============ WATER BOTTLE, held by the claw ============ -->
+  <g>
+    <rect x="860" y="350" width="28" height="82" rx="11" fill="#1c1c1c" stroke="#4a4a4a" stroke-width="2"/>
+    <rect x="868" y="339" width="12" height="15" rx="3" fill="#1c1c1c" stroke="#4a4a4a" stroke-width="2"/>
+    <rect x="860" y="382" width="28" height="17" fill="#242424" opacity="0.8"/>
+    <line x1="866" y1="364" x2="866" y2="424" stroke="#454545" stroke-width="1"/>
+    <line x1="882" y1="364" x2="882" y2="424" stroke="#303030" stroke-width="1"/>
+  </g>
+
+  <text x="112" y="590" font-family="'Archivo Black', sans-serif" font-size="40" fill="#f5f5f0" letter-spacing="1">POD 01</text>
+  <text x="112" y="620" font-family="monospace" font-size="14" fill="#8a8a85" letter-spacing="2">AMBIENT AI POD. LIGHT-RING STATUS. SINGLE-CLAW MANIPULATOR.</text>
+</svg>

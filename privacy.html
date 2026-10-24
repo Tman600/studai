@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- every link below is relative to this; publishing to GitHub Pages
+     swaps it for the sub-path the site is served from -->
+<base href="/studai/">
+<title>Privacy Policy — STUD AI</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="legal.css">
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav>
+    <a href="./" class="nav-logo">STUD AI</a>
+    <div class="nav-links">
+      <a href="projects">Projects</a>
+      <a href="./#capabilities">Capabilities</a>
+      <a href="./#contact">Start a Build</a>
+    </div>
+  </nav>
+</div>
+
+<main class="legal-main">
+  <a href="./" class="back-link">← Back home</a>
+
+  <span class="section-label">Legal</span>
+  <h1 class="legal-title">Privacy Policy</h1>
+  <p class="legal-updated">Last updated: <span id="lastUpdated"></span></p>
+
+  <div class="legal-body">
+    <p>The short version: this site doesn't collect personal data. No forms, no accounts, no analytics, no cookies. Here's the longer version.</p>
+
+    <h2>What this site collects</h2>
+    <p>Nothing. This site is static — it doesn't have a contact form, doesn't run analytics or tracking scripts, doesn't set cookies, and doesn't ask you to create an account or sign up for anything.</p>
+
+    <h2>The contact link</h2>
+    <p>The "Start a Build" contact option opens your own email application with a pre-filled address. This site never sees, receives, or stores the contents of that email — it's sent directly from your device to the site owner's inbox, the same as if you'd typed the address in yourself.</p>
+
+    <h2>Hosting and server logs</h2>
+    <p>Like virtually any web server, the infrastructure this site runs on may keep basic technical logs (such as IP address, browser type, and request timestamps) purely for operating and securing the server. These logs aren't used for tracking, profiling, or advertising, and aren't shared with third parties.</p>
+
+    <h2>Third-party download links</h2>
+    <p>Some projects on this site link out to third-party services (such as GitHub, Dropbox, or similar) to host downloadable files. Visiting those external sites is subject to their own privacy policies, not this one — this site has no visibility into or control over what those services collect.</p>
+
+    <h2>Children's privacy</h2>
+    <p>This site doesn't knowingly collect information from anyone, including children, since it doesn't collect information from anyone at all.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this site ever adds something that does collect data — a contact form, analytics, or similar — this page will be updated to describe exactly what's collected and why, before that feature goes live. The "last updated" date above reflects the most recent revision.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:hello@studai.dev" id="contactEmail">hello@studai.dev</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <span class="footer-logo">STUD AI</span>
+  <div class="footer-links">
+    <a href="terms">Terms</a>
+    <a href="privacy">Privacy</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  fetch('site-data.json').then(r => r.json()).then(data => {
+    if(data.ctaEmail){
+      const el = document.getElementById('contactEmail');
+      el.textContent = data.ctaEmail;
+      el.href = 'mailto:' + data.ctaEmail;
+    }
+  }).catch(() => {});
+</script>
+<script src="bg.js"></script>
+<script src="notice.js"></script>
+</body>
+</html>

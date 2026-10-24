@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- every link below is relative to this; publishing to GitHub Pages
+     swaps it for the sub-path the site is served from -->
+<base href="/studai/">
+<title>Projects — STUD AI</title>
+<meta name="description" content="Every STUD AI project: what has shipped and can be downloaded, and what is still being built.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav>
+    <a href="./" class="nav-logo">STUD AI</a>
+    <div class="nav-links">
+      <a href="projects" aria-current="page">Projects</a>
+      <a href="./#capabilities">Capabilities</a>
+      <a href="./#contact">Start a Build</a>
+    </div>
+  </nav>
+</div>
+
+<main class="projects-main">
+  <header class="projects-head">
+    <span class="section-label">Featured projects</span>
+    <h1 class="projects-title">The work</h1>
+    <p class="projects-count" id="projectsCount"></p>
+  </header>
+
+  <section class="project-group" id="shipped">
+    <div class="section-head">
+      <span class="section-label"><span class="status-chip shipped"></span> Shipped</span>
+      <span class="group-total" id="shippedTotal"></span>
+    </div>
+    <div id="shippedList"></div>
+  </section>
+
+  <section class="project-group" id="building">
+    <div class="section-head">
+      <span class="section-label"><span class="status-chip building"></span> In progress</span>
+      <span class="group-total" id="buildingTotal"></span>
+    </div>
+    <div id="buildingList"></div>
+  </section>
+</main>
+
+<footer>
+  <span class="footer-logo">STUD AI</span>
+  <span id="footerText"></span>
+  <div class="footer-links">
+    <a href="terms">Terms</a>
+    <a href="privacy">Privacy</a>
+  </div>
+</footer>
+
+<script src="tags.js"></script>
+<script src="projects.js"></script>
+<script src="bg.js"></script>
+<script src="notice.js"></script>
+</body>
+</html>

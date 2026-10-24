@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#0a0a0a"/>
+  <rect x="0" y="0" width="1200" height="675" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- signal waveform representing dial-up handshake -->
+  <g stroke="#2a2a2a" stroke-width="1" fill="none">
+    <line x1="80" y1="337" x2="1120" y2="337"/>
+  </g>
+
+  <polyline points="80,337 110,337 130,290 150,380 170,300 190,370 210,310 230,360 250,320 270,350 290,330 310,340 330,335 350,338 370,336 390,337"
+    fill="none" stroke="#f5f5f0" stroke-width="2"/>
+  <polyline points="390,337 420,337 440,300 460,370 480,310 500,360 520,320 540,350 560,325 580,345 600,332 620,340 640,335 660,338 680,336 700,337"
+    fill="none" stroke="#8a8a85" stroke-width="2"/>
+  <polyline points="700,337 730,337 750,315 770,355 790,325 810,345 830,332 850,340 870,335 890,338 910,336 930,337 950,337 970,337 1000,337 1120,337"
+    fill="none" stroke="#f5f5f0" stroke-width="2"/>
+
+  <!-- connection dots -->
+  <circle cx="150" cy="337" r="4" fill="#f5f5f0"/>
+  <circle cx="600" cy="337" r="4" fill="#f5f5f0"/>
+  <circle cx="1050" cy="337" r="4" fill="#f5f5f0"/>
+
+  <text x="150" y="300" font-family="monospace" font-size="12" fill="#8a8a85" text-anchor="middle">DIAL</text>
+  <text x="600" y="300" font-family="monospace" font-size="12" fill="#8a8a85" text-anchor="middle">HANDSHAKE</text>
+  <text x="1050" y="300" font-family="monospace" font-size="12" fill="#8a8a85" text-anchor="middle">CONNECTED</text>
+
+  <text x="600" y="480" font-family="'Archivo Black', sans-serif" font-size="52" fill="#f5f5f0" text-anchor="middle" letter-spacing="1">DIALUP</text>
+  <text x="600" y="515" font-family="monospace" font-size="14" fill="#8a8a85" text-anchor="middle" letter-spacing="2">INTENTIONAL CONNECTIVITY, RETUNED</text>
+</svg>

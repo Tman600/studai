@@ -1,0 +1,160 @@
+/* Every project on one page, set like a catalogue: a plate of the artwork
+   beside its entry, ruled rows, shipped work first. */
+
+.projects-main{
+  max-width:var(--measure);
+  margin:0 auto;
+  padding:132px var(--gutter) 40px;
+}
+
+.projects-head{
+  display:flex; flex-direction:column; gap:18px;
+  padding-bottom:12px;
+}
+.projects-title{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(2.6rem, 8vw, 5.4rem);
+  line-height:0.9;
+  letter-spacing:-0.03em;
+  text-transform:uppercase;
+}
+.projects-count{
+  font-size:1.05rem;
+  color:var(--gray);
+}
+
+/* the sections here sit inside .projects-main, which already sets the measure */
+.project-group{
+  max-width:none;
+  padding:64px 0 0;
+}
+.project-group .section-label{
+  display:inline-flex; align-items:center; gap:10px;
+}
+.group-total{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem; color:var(--dim);
+}
+
+/* ---------- ONE PROJECT ---------- */
+.feature{
+  display:grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap:0 40px;
+  padding:32px 0;
+  border-bottom:1px solid var(--line);
+}
+.feature:last-child{ border-bottom:none; }
+
+.feature-plate{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio:16 / 9;
+  border:1px solid var(--line);
+  background:var(--panel);
+  overflow:hidden;
+  transition: border-color 0.15s ease;
+}
+.feature-plate img{
+  width:100%; height:100%;
+  object-fit:contain;
+  display:block;
+}
+.plate-name{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(1.6rem, 4vw, 2.6rem);
+  text-transform:uppercase;
+  letter-spacing:-0.02em;
+  color:var(--dim);
+}
+
+.feature-text{
+  display:flex; flex-direction:column;
+  min-width:0;
+  padding-top:2px;
+}
+.feature-index{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem; color:var(--dim);
+  margin-bottom:14px;
+}
+.feature-name{
+  font-family:'Archivo Black', sans-serif;
+  font-size:clamp(1.5rem, 3vw, 2.1rem);
+  text-transform:uppercase;
+  letter-spacing:-0.01em;
+  line-height:1;
+  margin-bottom:12px;
+}
+.feature-desc{
+  font-size:1rem; color:var(--gray);
+  line-height:1.55;
+  max-width:44ch;
+}
+.feature-foot{
+  margin-top:auto;
+  padding-top:24px;
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:8px 20px; flex-wrap:wrap;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+}
+.feature-go{
+  color:var(--gray);
+  letter-spacing:0.08em; text-transform:uppercase;
+  padding-bottom:2px;
+  border-bottom:1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.feature:hover .feature-plate{ border-color:var(--gray); }
+.feature:hover .feature-go{ color:var(--white); border-bottom-color:var(--accent); }
+
+/* ---------- IN PROGRESS ---------- */
+.bench-grid{
+  display:grid; grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:28px;
+  padding:32px 0 8px;
+}
+.bench-card{ display:flex; flex-direction:column; min-width:0; }
+.bench-card .feature-plate{ margin-bottom:16px; }
+.bench-head{
+  display:flex; justify-content:space-between; align-items:baseline; gap:12px;
+  font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+  margin-bottom:10px;
+}
+.bench-head .feature-index{ margin-bottom:0; }
+.bench-name{
+  font-family:'Archivo Black', sans-serif;
+  font-size:1.3rem; text-transform:uppercase; letter-spacing:-0.01em;
+  line-height:1; margin-bottom:10px;
+}
+.bench-desc{ font-size:0.95rem; color:var(--white); line-height:1.5; margin-bottom:10px; }
+.bench-about{
+  font-size:0.86rem; color:var(--gray); line-height:1.6;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:4;
+  overflow:hidden;
+  margin-bottom:18px;
+}
+.bench-card .feature-go{
+  margin-top:auto; align-self:flex-start;
+  font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+}
+.bench-card:hover .feature-plate{ border-color:var(--gray); }
+.bench-card:hover .feature-go{ color:var(--white); border-bottom-color:var(--accent); }
+
+@media (max-width:900px){
+  .bench-grid{ grid-template-columns:1fr; gap:40px; }
+}
+
+.empty-group{
+  padding:28px 0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem; color:var(--dim);
+}
+
+@media (max-width:720px){
+  .projects-main{ padding-top:104px; }
+  .project-group{ padding-top:48px; }
+  .feature{ grid-template-columns:1fr; gap:20px; padding:28px 0; }
+  .feature-foot{ padding-top:18px; }
+}

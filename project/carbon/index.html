@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- every link below is relative to this; publishing to GitHub Pages
+     swaps it for the sub-path the site is served from -->
+<base href="/studai/">
+<title>Project — STUD AI</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav>
+    <a href="./" class="nav-logo">STUD AI</a>
+    <div class="nav-links">
+      <a href="projects" aria-current="page">Projects</a>
+      <a href="./#capabilities">Capabilities</a>
+      <a href="./#contact">Start a Build</a>
+    </div>
+  </nav>
+</div>
+
+<main class="project-main">
+  <div class="project-inner">
+    <a href="projects" class="back-link">← All projects</a>
+
+    <div id="notFound" class="not-found" style="display:none;">
+      <h1 class="section-title">Project not found</h1>
+      <p class="project-desc">This project doesn't exist or may have been removed.</p>
+      <a href="projects" class="cta-btn" style="margin-top:24px; display:inline-flex;">All projects →</a>
+    </div>
+  </div>
+
+  <div id="projectContent" style="display:none;">
+    <div class="project-image-bleed" id="imageBleed">
+      <div class="project-image-frame">
+        <img id="projectImage" alt="">
+      </div>
+    </div>
+
+    <div class="project-inner">
+      <div class="project-status-row">
+        <span class="status-chip" id="statusChip"></span>
+        <span class="project-status-label" id="statusLabel"></span>
+        <span class="project-meta-tag" id="metaTag"></span>
+      </div>
+
+      <h1 class="project-title" id="projectName"></h1>
+      <p class="project-tagline" id="projectDesc"></p>
+
+      <div class="project-body">
+        <span class="section-label">About</span>
+        <p class="project-long-desc" id="projectLongDesc"></p>
+      </div>
+
+      <div class="project-body" id="changelogSection" style="display:none;">
+        <span class="section-label">Changelog</span>
+        <div class="changelog-list" id="changelogList"></div>
+      </div>
+
+      <div class="project-body" id="upcomingSection" style="display:none;">
+        <span class="section-label">Upcoming</span>
+        <div class="upcoming-list" id="upcomingList"></div>
+      </div>
+
+      <div class="project-body">
+        <span class="section-label">Download</span>
+        <div class="download-row">
+          <a href="#" id="downloadBtn" class="download-btn"><span id="downloadBtnText"></span></a>
+          <span class="download-note" id="downloadNote"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span class="footer-logo">STUD AI</span>
+  <span id="footerText"></span>
+  <div class="footer-links">
+    <a href="terms">Terms</a>
+    <a href="privacy">Privacy</a>
+  </div>
+</footer>
+
+<script src="tags.js"></script>
+<script src="project.js"></script>
+<script src="bg.js"></script>
+<script src="notice.js"></script>
+</body>
+</html>

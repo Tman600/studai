@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- every link below is relative to this; publishing to GitHub Pages
+     swaps it for the sub-path the site is served from -->
+<base href="/studai/">
+<title>STUD AI — The AI Development Studio</title>
+<meta name="description" content="STUD AI is a small development studio. What it has shipped, what it is building, and how to start a build with it.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav>
+    <a href="./" class="nav-logo">STUD AI</a>
+    <div class="nav-links">
+      <a href="projects">Projects</a>
+      <a href="./#capabilities">Capabilities</a>
+      <a href="./#contact">Start a Build</a>
+    </div>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="hero-eyebrow">
+    <span class="pulse-dot"></span>
+    <span id="eyebrowText"></span>
+  </div>
+  <h1 class="wordmark" id="wordmarkText"></h1>
+  <div class="caption-row">
+    <span class="caption-rule"></span>
+    <p class="caption" id="captionText"></p>
+    <a href="#featured" class="caption-link">Recent work ↓</a>
+  </div>
+</header>
+
+<section id="featured">
+  <div class="section-head">
+    <span class="section-label">01 — Featured</span>
+    <h2 class="section-title">Recent work</h2>
+  </div>
+
+  <div class="featured-grid" id="featuredList"></div>
+
+  <div class="featured-foot">
+    <a href="projects" class="caption-link" id="allProjectsLink">All projects →</a>
+  </div>
+</section>
+
+<section class="follow-on" id="in-progress">
+  <div class="section-head">
+    <span class="section-label"><span class="status-chip building"></span> 02 — In progress</span>
+    <h2 class="section-title">On the bench</h2>
+  </div>
+
+  <div class="featured-grid" id="buildingList"></div>
+</section>
+
+<section id="capabilities">
+  <div class="section-head">
+    <span class="section-label">03 — Capabilities</span>
+    <h2 class="section-title">How we build</h2>
+  </div>
+
+  <div class="capabilities" id="capabilitiesList"></div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="section-head" style="border-bottom:none; margin-bottom:40px;">
+    <span class="section-label">04 — Start a build</span>
+  </div>
+  <h2 class="cta-title" id="ctaTitleText"></h2>
+  <a href="#" class="cta-btn" id="ctaBtn"></a>
+</section>
+
+<footer>
+  <span class="footer-logo">STUD AI</span>
+  <span id="footerText"></span>
+  <div class="footer-links">
+    <a href="terms">Terms</a>
+    <a href="privacy">Privacy</a>
+  </div>
+</footer>
+
+<script src="tags.js"></script>
+<script src="site.js"></script>
+<script src="bg.js"></script>
+<script src="notice.js"></script>
+</body>
+</html>
